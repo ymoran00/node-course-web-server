@@ -7,6 +7,14 @@ h1, h2, h3, h4, h5 {
   font-family: 'Secular One', sans-serif;
 }
 
+h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  text-align: center;
+  background-color: rgba(249, 204, 22, 0.7);
+  padding: 8px 0;
+}
+
 
 .header {
   background: url('/images/main00.jpg') no-repeat top center;
@@ -31,7 +39,15 @@ h1, h2, h3, h4, h5 {
 }
 
 .main-video {
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
   display: flex;
+  -webkit-align-items: stretch;
+  align-items: stretch;
 }
 
 .page-body {
@@ -55,7 +71,23 @@ h1, h2, h3, h4, h5 {
 }
 
 .main-video {
-  width: 56vw;
+  width: 75vw;
+  margin: 0 auto 50px auto;
+}
+
+.primary {
+  width: 50vw;
+}
+
+.wishes {
+  width: 25vw;
+  margin-right: 20px;
+  font-size: 1.3em;
+  line-height: 1.4em;
+}
+
+.wishes p {
+  margin-bottom: 15px;
 }
 
 .single-video {
@@ -66,21 +98,15 @@ h1, h2, h3, h4, h5 {
   margin-bottom: 15px;
 }
 
-.primary.youtube {
-  width: 56vw;
-  height: 30vw;
-}
-
 .secondary.youtube {
   width: 28vw;
-  height: 15vw;
 }
 
 
 .youtube {
     background-color: #000;
     position: relative;
-    padding-top: 56.25%;
+    padding-top: 53.25%;
     overflow: hidden;
     cursor: pointer;
     box-sizing: border-box;

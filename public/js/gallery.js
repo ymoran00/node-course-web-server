@@ -12,6 +12,7 @@ var galleryPreload = function() {
   var image, i;
   for (i=1; i<NUM_OF_IMAGES; i++) {
     image = new Image();
+    console.log('Setting image ' + getImageName(i) + ' to load')
     image.onload = imageReady;
     image.src = getImageName(i);
   }

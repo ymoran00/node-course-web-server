@@ -84,7 +84,8 @@ var fillVideos = function() {
     var playButton = document.createElement('div');
     playButton.className = 'play-button';
     frame.appendChild(playButton);
-    var span = document.createElement('span');
+    var span = document.createElement('div');
+    span.className = 'video-title';
     span.innerText = item.text;
     newVideo.appendChild(frame);
     newVideo.appendChild(span);

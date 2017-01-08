@@ -43,6 +43,19 @@ h2 {
 .page-body {
   padding: 50px 30px;
   margin: 0 auto;
+  position: relative;
+}
+
+.page-body::after {
+  content: "";
+  background: url(../images/birthday.jpg);
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 .videos {
@@ -61,7 +74,7 @@ h2 {
 }
 
 .main-video {
-  width: 75vw;
+  width: 82vw;
   margin: 0 auto 50px auto;
 }
 
@@ -75,6 +88,8 @@ h2 {
 
 .wishes {
   width: 25vw;
+  background-color: rgba(255,255,255,0.8);
+  padding: 20px;
   margin-right: 20px;
   font-size: 1.3em;
   line-height: 1.4em; }
@@ -87,6 +102,14 @@ h2 {
   width: 30vw;
   display: block;
   margin-bottom: 15px;
+}
+
+.video-title {
+  width: 28vw;
+  font-size: 1.2em;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  background-color: rgba(255,255,255,0.8);
 }
 
 .youtube {
@@ -188,7 +211,11 @@ h2 {
     margin-bottom: 30px;
   }
 
-  .wishes, .secondary {
+  .video-title {
+    font-size: 16px;
+  }
+
+  .wishes, .secondary, .video-title {
     width: 100%;
   }
 

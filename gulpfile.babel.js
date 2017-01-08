@@ -50,7 +50,7 @@ const jsPaths = {
 };
 
 const imagesPaths = {
-  src: `${dirs.src}/images/*`,
+  src: `${dirs.src}/images/**/*`,
   dest: `${dirs.dest}/images/`
 };
 

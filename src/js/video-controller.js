@@ -52,9 +52,9 @@ var videos = [
     key: 'u1WTZ-DAOHM'},
   { text: 'יפה',
     key: '_wdX-Lc-D1I'},
-  { text: 'עטרה וווו',
+  { text: 'עטרה וחיים',
     key: 'QDLz6REhYuM'},
-  { text: 'אילנה ווווו',
+  { text: 'אילנה ויאיר',
     key: '0dRWUqqnBm4'},
   { text: 'רבקה',
     key: '0vuX28OkY-4'}

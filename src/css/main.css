@@ -48,7 +48,9 @@ h2 {
 
 .page-body::after {
   content: "";
-  background: url(../images/birthday.jpg);
+  background: linear-gradient(1deg, #4b53f8, #d1d3f6);
+  background-size: 400% 400%;
+  animation: background 15s ease infinite;
   opacity: 0.3;
   top: 0;
   left: 0;
@@ -56,6 +58,12 @@ h2 {
   right: 0;
   position: absolute;
   z-index: -1;
+}
+
+@keyframes background {
+    0%{background-position:51% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:51% 0%}
 }
 
 .videos {
@@ -214,6 +222,12 @@ h2 {
   .video-title {
     font-size: 16px;
   }
+
+  .youtube .play-button {
+    background-color: #bd2e23;
+    opacity: 1;
+  }
+
 
   .wishes, .secondary, .video-title {
     width: 100%;

@@ -1,0 +1,285 @@
+$theme-orange: rgba(249, 204, 22, 0.7);
+$youtube-play-color: #bd2e23;
+$overlay-text-white: rgba(255,255,255,0.6);
+
+body {
+  direction: rtl;
+  font-family: 'Rubik', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Secular One', sans-serif;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  text-align: center;
+  background-color: $theme-orange;
+  padding: 8px 30px;
+}
+
+.browser-error {
+  font-size: 18px;
+  color: white;
+  background-color: #C10808;
+  line-height: 30px;
+  width: 100%;
+  text-align: center;
+  font-weight: 200;
+  display: none;
+}
+
+.header {
+  background: url("/images/main00.jpg") no-repeat top center;
+  transition: background-image 2s;
+  background-size: cover;
+  background-blend-mode: darken;
+  width: 100%;
+  height: 90vh;
+
+  .title {
+    color: white;
+    font-size: 5vw;
+    width: 35vw;
+    text-shadow: 3px 3px 10px #000;
+    text-align: right;
+    position: relative;
+    top: 40vh;
+    background-color: $theme-orange;
+    padding: 15px 20px 15px 10px;
+  }
+}
+
+
+@keyframes background {
+    0%{background-position:51% 0%}
+    50%{background-position:50% 100%}
+    100%{background-position:51% 0%}
+}
+
+.page-body {
+  padding: 50px 30px;
+  margin: 0 auto;
+  position: relative;
+
+  &::after {
+    content: "";
+    background: linear-gradient(1deg, #4b53f8, #d1d3f6);
+    background-size: 400% 400%;
+    animation: background 15s ease infinite;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .main-video {
+    display: flex;
+    width: 82vw;
+    margin: 0 auto 50px auto;
+    align-items: stretch;
+
+    .wishes {
+      width: 35vw;
+      box-sizing: border-box;
+      background-color: $overlay-text-white;
+      padding: 20px;
+      font-size: 1.3em;
+      line-height: 1.4em;
+
+      p {
+        margin-bottom: 15px;
+      }
+    }
+
+  }
+
+  .videos {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+
+    .video-col {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 65vw;
+
+      .single-video {
+        width: 30vw;
+        display: block;
+        margin-bottom: 15px;
+
+        .video-title {
+          width: 28vw;
+          font-size: 1.2em;
+          box-sizing: border-box;
+          padding: 10px 20px;
+          text-align: center;
+          background-color: $overlay-text-white;
+        }
+      }
+
+    }
+
+  }
+}
+
+.primary {
+  width: 50vw;
+}
+
+.secondary {
+  width: 28vw;
+}
+
+.youtube {
+  background-color: #000;
+  position: relative;
+  padding-top: 57.25%;
+  overflow: hidden;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+
+  .play-button {
+    width: 90px;
+    height: 60px;
+    background-color: #222;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    opacity: 0.7;
+    border-radius: 6px;
+
+    &:hover {
+      background-color: $youtube-play-color;
+      opacity: 1;
+    }
+
+    &::before {
+      content: "";
+      border-style: solid;
+      border-width: 15px 0 15px 26.0px;
+      border-color: transparent transparent transparent white;
+    }
+  }
+
+  img {
+    width: 100%;
+    top: -16.84%;
+    left: 0;
+  }
+
+  iframe {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+}
+
+
+
+.youtube img,
+.youtube .play-button {
+  cursor: pointer;
+}
+
+.youtube img,
+.youtube iframe,
+.youtube .play-button,
+.youtube .play-button:before {
+  position: absolute;
+}
+
+.youtube .play-button,
+.youtube .play-button:before {
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+
+@supports not (display: flex) {
+  .browser-error {
+    display: block;
+  }
+}
+
+@media screen and (max-device-width: 480px) {
+  h2 {
+    font-size: 4em;
+  }
+
+  .image-header {
+    height: 100vh;
+  }
+
+  .header {
+    .title {
+      top: 70vh;
+      font-size: 90px;
+      width: 50vw;
+    }
+  }
+
+  .page-body {
+
+    .main-video {
+      flex-direction: column;
+      margin-bottom: 30px;
+
+      .wishes {
+        width: 100%;
+      }
+    }
+
+    .videos {
+      flex-direction: column;
+
+      .video-col {
+        width: 100%;
+
+        .single-video {
+          width: 100%;
+          margin-bottom: 30px;
+
+          .video-title {
+            font-size: 16px;
+            width: 100%;
+          }
+        }
+
+      }
+
+    }
+  }
+
+
+  .primary {
+    width: 100%;
+  }
+
+  .youtube{
+    .play-button {
+      background-color: $youtube-play-color;
+      transform: scale(1.5);
+      transform-origin: bottom right;
+      opacity: 1;
+    }
+  }
+
+
+  .secondary {
+    width: 100%;
+  }
+
+
+}

@@ -62,11 +62,9 @@ var videos = [
 
 
 var fillVideos = function() {
-  var leftFrag = document.createDocumentFragment();
-  var rightFrag = document.createDocumentFragment();
+  var videoFrag = document.createDocumentFragment();
 
   videos.forEach(function(item, index) {
-    var isLeft = index % 2 == 1;
     var newVideo = document.createElement('div');
     newVideo.className = 'single-video';
     var frame = document.createElement('div');
@@ -90,14 +88,9 @@ var fillVideos = function() {
     newVideo.appendChild(frame);
     newVideo.appendChild(span);
 
-    if (isLeft) {
-      leftFrag.appendChild(newVideo);
-    } else {
-      rightFrag.appendChild(newVideo);
-    }
+    videoFrag.appendChild(newVideo);
   });
-  document.getElementById('left-col').appendChild(leftFrag);
-  document.getElementById('right-col').appendChild(rightFrag);
+  document.getElementById('videoContainer').appendChild(videoFrag);
 }
 
 var connectClickHandlers = function () {

@@ -13,7 +13,17 @@ import sourcemaps from 'gulp-sourcemaps';
 import runSequenceBase from 'run-sequence';
 
 const runSequence = runSequenceBase.use(gulp);
-
+const AUTOPREFIXER_BROWSERS = [
+            'ie >= 10',
+            'ie_mob >= 10',
+            'ff >= 30',
+            'chrome >= 34',
+            'safari >= 7',
+            'opera >= 23',
+            'ios >= 7',
+            'android >= 4.4',
+            'bb >= 10'
+        ];
 const dirs = {
   src: 'src',
   dest: 'build'
@@ -40,7 +50,7 @@ const cssPaths = {
 
 gulp.task('css', () => {
   return gulp.src(cssPaths.src)
-    .pipe(autoprefixer())
+    .pipe(autoprefixer(AUTOPREFIXER_BROWSERS))
     .pipe(gulp.dest(cssPaths.dest));
 });
 

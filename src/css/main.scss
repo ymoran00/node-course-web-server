@@ -31,7 +31,8 @@ h2 {
 }
 
 .header {
-  background: url("/images/main00.jpg") no-repeat top center;
+  background-repeat: no-repeat;
+  background-position: top center;
   transition: background-image 2s;
   background-size: cover;
   background-blend-mode: darken;

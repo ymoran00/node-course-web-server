@@ -24,7 +24,7 @@ var videos = [
     key: 'c3HfrZ3Xt1I'},
   { text: 'ולנטינה וסמיון',
     key: 'xUGgSQe27xw'},
-  { text: 'אליזבת',
+  { text: 'אליזבט',
     key: '0Q6KdCIwYUw'},
   { text: 'תמר',
     key: 'WXT5ApbFHS8'},
